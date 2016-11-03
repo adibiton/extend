@@ -1,0 +1,9 @@
+{
+  "name": "extend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "3.1.*"
+  }
+}
