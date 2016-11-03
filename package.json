@@ -1,9 +1,16 @@
 {
   "name": "extend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "extend.js",
   "license": "MIT",
+  "scripts": {
+    "test": "mocha"
+  },
   "dependencies": {
     "mocha": "3.1.*"
+  },
+  "devDependencies": {
+    "node-inspector": "0.12.*",
+    "should": "11.1.*"
   }
 }
