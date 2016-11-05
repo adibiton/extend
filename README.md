@@ -1,4 +1,4 @@
-# Extend like the node-extend way 
+# Extend (node-extend with some salt) 
 - Deep copy from multiple sources to destination object
 - Allow passing array of properties **not** to be copied to the 
 destination object
