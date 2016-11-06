@@ -6,19 +6,19 @@ function containsObjects(arr) {
     });
 }
 
-function clone(obj) {
+function clone(exclude, obj) {
     let cloned = {};
-    copyProperty(cloned, obj);
+    copyProperty(cloned, exclude, obj);
     return cloned;
 }
 
-function copyProperty(dest, except, src) {
+function copyProperty(dest, exclude, src) {
     for (let prop in src) {
         if (src.hasOwnProperty(prop)) {
-            if (except !== null && except.includes(prop)) {
+            if (exclude !== null && exclude.includes(prop)) {
                 continue;
             } else if (typeof src[prop] === 'object') {
-                dest[prop] = clone(src[prop]);
+                dest[prop] = clone(exclude, src[prop]);
             } else {
                 dest[prop] = src[prop];
             }
@@ -27,7 +27,7 @@ function copyProperty(dest, except, src) {
     }
 }
 
-module.exports = function (dest, except, ...src) {
+module.exports = function (dest, exclude, ...src) {
     if (!containsObjects(src)) {
         throw TypeError('source input(s) must be of type object');
     }
@@ -36,10 +36,10 @@ module.exports = function (dest, except, ...src) {
     }
     if (Array.isArray(src)) {
         src.forEach(function (obj) {
-            copyProperty(dest, except, obj);
+            copyProperty(dest, exclude, obj);
         });
     }
     else {
-        copyProperty(dest, except, src);
+        copyProperty(dest, exclude, src);
     }
 };
