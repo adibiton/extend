@@ -6,7 +6,7 @@ destination object
 
 
 # Installation
-`npm install extend-exclude`
+`npm install @adibiton/extend-exclude`
 
 # API
 
@@ -30,7 +30,17 @@ The source object(s) to be copied
 # How to use
 `const extend = require('extend-exclude');
 extend({}, null, {firstName: 'Franz'}, {lastName: 'Schubert'})`
+
 # Example
+`const extend = require('@adibiton/extend-exclude');
+
+let x = {name: {first: 'Franz', last: 'Schubert'}, profession: 'composer'}; 
+let y = {age: '55'};  
+
+extend(y, ['profession'], x);  
+
+console.log(y); //{ age: '55', name: { first: 'Franz', last: 'Schubert' } }`
+
 
 
 

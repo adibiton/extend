@@ -1,6 +1,7 @@
 {
-  "name": "extend",
+  "name": "@adibiton/extend-exclude",
   "version": "1.0.0",
+	"description": "a util function that give that power of extend with excluding properties", 
   "main": "extend.js",
   "license": "MIT",
   "scripts": {
