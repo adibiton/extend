@@ -27,19 +27,22 @@ Type: object / Array of objects
 The source object(s) to be copied
 
 
-# How to use
-`const extend = require('extend-exclude');
-extend({}, null, {firstName: 'Franz'}, {lastName: 'Schubert'})`
+# Install
+```
+npm install extend-exclude
+```
 
 # Example
-`const extend = require('@adibiton/extend-exclude');
+```javascript
+const extend = require('extend-exclude');
 
 let x = {name: {first: 'Franz', last: 'Schubert'}, profession: 'composer'}; 
 let y = {age: '55'};  
 
 extend(y, ['profession'], x);  
 
-console.log(y); //{ age: '55', name: { first: 'Franz', last: 'Schubert' } }`
+console.log(y); //{ age: '55', name: { first: 'Franz', last: 'Schubert' } }
+```
 
 
 
