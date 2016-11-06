@@ -1,6 +1,6 @@
 {
   "name": "extend-exclude",
-  "version": "1.0.0",
+  "version": "1.0.1",
 	"description": "a util function that give that power of extend with excluding properties", 
   "main": "extend.js",
   "license": "MIT",
